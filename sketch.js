@@ -3,14 +3,15 @@ var backgroundImage;
 var bgImg;
 var database;
 var form, player;
-var playerCount;
-var gamestate
+var playerCount = 0
+var gameState
 var carro1
 var carro2
 var carro1img
 var carro2img
 var carros = []
 var pista
+var allPlayers
 function preload() {
   backgroundImage = loadImage("./assets/planodefundo.png");
 carro1img = loadImage("assets/car1.png")
@@ -32,9 +33,10 @@ function draw() {
   if(playerCount === 2){
     game.update(1)
   }
- if (gamestate===1){
+ if (gameState===1){
    game.play()
  }
+ console.log(allPlayers)
 }
 
 function windowResized() {

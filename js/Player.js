@@ -33,7 +33,7 @@ addPlayer(){
     static getplayerinfo(){ 
       var playerinforef = database.ref("players")
       playerinforef.on ("value", data => {
-        allPlayers = data.value()
+        allPlayers = data.val()
       })
     }
 }
